@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <string>
-using namespace std;
 
+using namespace std;
 string grade(){
     int x;
     x = rand()%9;
@@ -33,7 +33,7 @@ string grade(){
 
 int main(){
     srand(time(0));
-    cout << "Press Enter 3 times to reveal your future." <<endl;
+    cout << "Press Enter 3 times to reveal your future.";
     cin.get();
     cin.get();
     cin.get();
