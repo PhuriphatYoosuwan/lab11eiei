@@ -9,7 +9,7 @@
 using namespace std;
 string grade(){
     int x;
-    x = rand()%9;
+    x = 1+rand()%9;
     if(x == 1){
         return "A";
     }else if(x == 2){

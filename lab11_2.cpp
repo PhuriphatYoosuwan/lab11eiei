@@ -7,24 +7,31 @@ string cardNames[] = {"","A","2","3","4","5","6","7","8","9","10","J","Q","K"};
 int cardScores[] = {0,1,2,3,4,5,6,7,8,9,10,10,10,10};
 
 int drawCard(void){
-	//Write the function to random the number from 1 to 13 and return that random number.
-	//srand() is used in main(). Do not use srand() here.
+    int x;
+    x = 1+rand()%13;
+    return x;
 }
 
 int calScore(int x,int y,int z){
-	//Write the function to calculate the score with is the rightmost digit of summation of the scores from three cards.
-	//Return the score. 
+    int sum;
+    sum = cardScores[x]+cardScores[y]+cardScores[z];
+    sum  = sum%10;
+    return sum;
 }
 
-int findYugiAction(int s){	
-	if(s == 9) return 2; // Yugi will definitely stay (2) when current score (s) is equal to 9
-	else if(s < 6) return 1; // Yugi will definitely draw (1) when current score (s) is less than 6
+int findYugiAction(int s){
+	if(s == 9) return 2;
+	else if(s < 6) return 1;
 	else{
-		// If current score is 6,7,8, Yugi will draw with probability 69% and will stay with probability 31% 
-		// Write conditions here using random number 
+	    int x;
+	    x = 1+rand()%100;
+	    if(x <= 69){
+	        return 1;
+	    }else {
+	        return 2;
+	    }
 	}
 }
-
 void checkWinner(int p, int y){
 	// Write condition for cout in this function
 	cout << "\n---------------------------------\n";
