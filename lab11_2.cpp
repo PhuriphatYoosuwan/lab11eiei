@@ -1,6 +1,7 @@
-#include<iostream>
-#include<string>
-
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>2
 using namespace std;
 
 string cardNames[] = {"","A","2","3","4","5","6","7","8","9","10","J","Q","K"};
